@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WONUOLA MOTORS</title>
+<style>
+/* === Body & Background === */
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 200px; /* header height + nav height */
+  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+              url('background.jpg.webp') center/cover no-repeat fixed;
+}
+
+
+/* === Header === */
+header {
+  background: rgba(0,128,0,0.9); /* green header */
+  color: white;
+  text-align: center;
+  padding: 0px 0px;  /* adjust if header too tall */
+  position: fixed;     /* FIXED keeps it at top */
+  top: 0;              /* top of the page */
+  left: 0;
+  width: 100%;         /* full width */
+  z-index: 9999;       /* above everything else */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  color: #f1f5f1; /* green text */
+  font-size: 3em;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+header img {
+  height: 40px;
+  margin-left:5px;
+  margin-right:5px;
+  filter: none; /* keep original color */
+}
+header p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+header p.notice {
+  color: rgb(20,20,20);
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* === Navigation === */
+nav {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;       /* keeps nav visible when scrolling */
+  top: 120px;            /* adjust based on header height */
+  left: 0;
+  width: 100%;
+  z-index: 9998;         /* just below header */
+  margin: 0;
+  padding: 0px 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #00ff00;
+}
+
+/* === Sections === */
+section { padding:50px 20px; text-align:center; }
+h2 { color:#008000; margin-bottom:20px; }
+
+/* === Gallery === */
+.gallery {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.gallery img {
+  width:300px;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  transition:transform .3s, box-shadow .3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+.gallery img:hover {
+  transform:scale(1.05);
+  box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* === Feedback Form === */
+.feedback-form {
+  max-width:500px;
+  margin:auto;
+  background:rgba(242,242,242,0.95);
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+  width:100%;
+  margin-bottom:15px;
+  padding:12px;
+  border-radius:7px;
+  border:1px solid #ccc;
+  font-size:1em;
+}
+.feedback-form button {
+  background:#008000;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:7px;
+  cursor:pointer;
+  font-size:1em;
+  transition:.3s;
+}
+.feedback-form button:hover { background:#eceeec; }
+
+/* === Footer === */
+footer {
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* === WhatsApp Float === */
+.whatsapp-float {
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background-color:#25D366;
+  color:white;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  z-index:1000;
+  transition:.3s;
+}
+.whatsapp-float:hover { transform:scale(1.1); }
+.whatsapp-float img { width:35px; height:35px; }
+
+/* === all-cars === */
+#all-cars img {
+  transition: transform .3s, box-shadow .3s;
+  border-radius:5px;
+}
+#all-cars img:hover {
+  transform: scale(1.2);
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* === Responsive === */
+@media(max-width:768px) {
+  .gallery img { width:90%; height:auto; }
+  nav { flex-direction:column; }
+  header h1 { font-size:2.5em; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:15px;">
+    <h1>WONUOLA MOTORS LTD.</h1>
+    <img src="download (2).webp" alt="Toyota Logo">
+    <img src="download (3) honda.webp" alt="Honda Logo">
+    <img src="download (3) nisan.webp" alt="Nissan Logo">
+    <img src="OIP (2) lexus.webp" alt="Lexus Logo">
+    <img src="mazda.webp" alt="Mazda Logo">
+    <img src="OIP mistibush.jpeg" alt="Mitsubishi Logo">
+    <img src="download (3) suzuki.webp" alt="Suzuki Logo">
+    <img src="download (3)subaru.webp" alt="Subaru Logo">
+  </div>
+  <p>We Fix | Service | Hire Cars | Buy & Sell | Uber <br>
+  <p class="notice">⚠️ We specialize in all kinds of cars, trusted across Nigeria for reliability and excellence!</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#japanese-cars">Japanese Cars</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#feedback">Feedback</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>.
+  <p>At Wonuola Motors, we are passionate about keeping all kinds of cars running at their best. From Toyota to Honda, Nissan to Mercedes, BMW to Ford, we provide expert repairs, reliable maintenance, and trustworthy car hire. Our customers choose us for our honesty, precision, and dedication to excellence. <strong>We specialize in all kinds of cars</strong> (Japanese, European, American, etc.). Trusted in Nigeria for reliability and excellence.</p>
+</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <ul style="list-style:none;padding:0">
+    <li>✔ Car Repair & Maintenance</li>
+    <li>✔ Vehicle Hire</li>
+    <li>✔ Buy & Sell Japanese Cars</li>
+    <li>✔ Uber Partnership</li>
+    <li>✔ Genuine Spare Parts</li>
+    <li>✔ Expert Diagnostics</li>
+    <li>✔ Preventive Maintenance</li>
+    <li>✔ Emergency Roadside Assistance</li>
+    <li>✔ Comprehensive Vehicle Inspections</li>
+  </ul>
+</section>
+
+<section id="all-cars">
+  <h2>Cars We Service</h2>
+  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:20px;">
+    <img src="OIP (2)12.webp" alt="Toyota" height="120">
+    <img src="OIP (2) ho car.webp" alt="Honda" height="110">
+    <img src="OIP (2)ni car.webp" alt="Nissan" height="120">
+    <img src="download (3) le.webp" alt="Lexus" height="110">
+    <img src="download (3) maza car.webp" alt="Mazda" height="120">
+    <img src="misss.jpeg" alt="Mitsubishi" height="120">
+    <img src="download (3)zuki.webp" alt="Suzuki" height="150">
+    <img src="OIP (2) suban.webp" alt="Subaru" height="150">
+     <!-- You can add European, American, and other car brands here -->
+    <img src="ford.webp" alt="Ford" height="150">
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery — 2025 Toyota Camry & Highlander</h2>
+  <div class="gallery">
+    <img src="images/camry.webp" alt="2025 Toyota Camry" loading="lazy">
+    <img src="images/highlander.webp" alt="2025 Toyota Highlander" loading="lazy">
+    <img src="images/workshop.webp" alt="Abuja Car Workshop" loading="lazy">
+  </div>
+</section>
+
+<section id="feedback">
+  <h2>Customer Feedback</h2>
+  <form class="feedback-form" action="https://formspree.io/f/yourID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <select name="rating" required>
+      <option value="">Rate our Service</option>
+      <option>⭐ Poor</option>
+      <option>⭐⭐ Fair</option>
+      <option>⭐⭐⭐ Good</option>
+      <option>⭐⭐⭐⭐ Very Good</option>
+      <option>⭐⭐⭐⭐⭐ Excellent</option>
+    </select>
+    <textarea name="message" rows="4" placeholder="Write your report or feedback here..." required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Phone:</strong> 08029765021</p>
+  <p><strong>Email:</strong> osungbure44@gmail.com</p>
+  <p><strong>Address:</strong> 
+    <a href="https://www.google.com/maps/search/?api=1&query=Plot+28+Katampe+Rd,+Kado,+Jahi+900108,+FCT+Abuja,+Nigeria" 
+       target="_blank" 
+       style="color:#00ff00; font-weight:bold; text-decoration:none;">
+       Plot 28 Katampe Rd, Kado, Jahi 900108, FCT Abuja, Nigeria
+    </a>
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2025 WONUOLA MOTORS — All rights reserved</p>
+</footer>
+
+<a href="https://wa.me/2348055067880" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+</body>
+</html>
+
